@@ -102,4 +102,27 @@ export function countPresent(attendance) {
  */
 export function complementDNA(dna) {
   // TODO
+  let complementaryStrand = "";
+  if (typeof dna !== "string") {
+    return null;
+  } else {
+    for (let i = 0; i < dna.length; i++) {
+      switch (dna[i]) {
+        case "A":
+          complementaryStrand += "T";
+          break;
+        case "T":
+          complementaryStrand += "A";
+          break;
+        case "C":
+          complementaryStrand += "G";
+          break;
+        case "G":
+          complementaryStrand += "C";
+          break;
+      }
+    }
+
+    return complementaryStrand;
+  }
 }
