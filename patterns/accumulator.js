@@ -79,6 +79,15 @@ export function getLongestString(strings) {
  */
 export function countPresent(attendance) {
   // TODO
+  let present = 0;
+  for (let i = 0; i < attendance.length; i++) {
+    if (attendance[i] === true) {
+      present = present + 1;
+    } else if (attendance[i] === false) {
+      present = present + 0;
+    }
+  }
+  return present;
 }
 
 /**
