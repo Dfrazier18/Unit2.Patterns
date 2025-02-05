@@ -36,4 +36,9 @@ export function vote(age) {
  */
 export function concatenateStrings(str1, str2) {
   // TODO
+  if (typeof str1 !== "string" || typeof str2 !== "string") {
+    return undefined;
+  } else {
+    return str1 + str2;
+  }
 }
