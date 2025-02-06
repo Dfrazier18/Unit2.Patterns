@@ -37,6 +37,18 @@ export function makeBoard(rows, cols) {
  */
 export function makeTriangle(size) {
   // TODO
+  // This one I am struggling with
+  if (typeof size !== "number") {
+    return null;
+  } else if (size <= 0) {
+    return [];
+  }
+  const triangle = [];
+  for (let i = 0; i < size; i++) {
+    let row = triangle[i] + "-";
+    triangle.push(row);
+  }
+  return triangle;
 }
 
 /**
@@ -47,4 +59,17 @@ export function makeTriangle(size) {
  */
 export function countLetter(words, letter) {
   // TODO
+  if (typeof letter !== "string") {
+    return 0;
+  } else if (words.length <= 0) {
+    return 0;
+  } else {
+    let count = 0;
+    for (let i = 0; i < words.length; i++) {
+      if (words[i][i] === letter) {
+        count = count + 1;
+      }
+      return count;
+    }
+  }
 }

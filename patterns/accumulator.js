@@ -122,7 +122,6 @@ export function complementDNA(dna) {
           break;
       }
     }
-
     return complementaryStrand;
   }
 }
