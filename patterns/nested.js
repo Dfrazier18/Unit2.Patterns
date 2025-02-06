@@ -66,10 +66,14 @@ export function countLetter(words, letter) {
   } else {
     let count = 0;
     for (let i = 0; i < words.length; i++) {
-      if (words[i][i] === letter) {
-        count = count + 1;
+      const word = words[i];
+      for (let j = 0; j < word.length; j++) {
+        const character = word[j];
+        if (character === letter) {
+          count = count + 1;
+        }
       }
-      return count;
     }
+    return count;
   }
 }
